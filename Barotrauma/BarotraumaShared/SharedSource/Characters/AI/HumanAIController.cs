@@ -455,7 +455,9 @@ namespace Barotrauma
                     reportProblemsTimer = reportProblemsInterval;
                 }
                 SpeakAboutIssues();
-                UnequipUnnecessaryItems();
+                if (Character.Submarine == null) {
+                    UnequipUnnecessaryItems();
+                }
                 reactTimer = GetReactionTime();
             }
 
